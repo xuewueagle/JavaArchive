@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name="connection.url">jdbc:mysql://118.24.153.54:3306/dev_test?characterEncoding=UTF-8</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456</property>
+
+        <mapping resource="com/eagle/entity/CstCustomerEntity.hbm.xml"/>
+        <mapping class="com.eagle.entity.CstCustomerEntity"/>
+        <mapping resource="com/eagle/entity/TestEntity.hbm.xml"/>
+        <mapping class="com.eagle.entity.TestEntity"/>
+
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+
+    </session-factory>
+</hibernate-configuration>
