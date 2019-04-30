@@ -15,7 +15,7 @@
 </HEAD>
 <BODY>
 	<FORM id=form1 name=form1
-		action="${pageContext.request.contextPath }/customerServlet?method=editsubmit"
+		action="${pageContext.request.contextPath }/customer?method=editSubmit"
 		method=post>
 		<input type="hidden" name="custId" value="${customer.custId }"/>
 
@@ -85,8 +85,17 @@
 														style="WIDTH: 180px" maxLength=50 name="custMobile" value="${customer.custMobile }">
 								</td>
 							</TR>
-							
+
 							<TR>
+								<td>客户职业 ：</td>
+								<td>
+									<INPUT class=textbox id=sChannel2
+										   style="WIDTH: 180px" maxLength=50 name="custIndustry" value="${customer.custIndustry }">
+								</td>
+
+							</TR>
+							
+							<%--<TR>
 								<td>联系地址 ：</td>
 								<td>
 								<INPUT class=textbox id=sChannel2
@@ -109,7 +118,7 @@
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="custWebsite" value="${customerDetail.custWebsite }">
 								</td>
-							</TR>
+							</TR>--%>
 							<tr>
 								<td rowspan=2>
 								<INPUT class=button id=sButton2 type=submit

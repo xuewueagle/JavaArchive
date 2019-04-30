@@ -15,7 +15,7 @@
 </HEAD>
 <BODY>
 	<FORM id=form1 name=form1
-		action="${pageContext.request.contextPath }/linkmanServlet?method=editsubmit"
+		action="${pageContext.request.contextPath }/linkMan?method=editSubmit"
 		method=post>
 		<input type="hidden" name="lkmId" value="${linkman.lkmId }"/>
 

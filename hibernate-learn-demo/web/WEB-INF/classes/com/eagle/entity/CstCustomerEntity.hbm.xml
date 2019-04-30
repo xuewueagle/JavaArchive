@@ -24,7 +24,7 @@
             <column name="cust_industry" sql-type="varchar(32)" length="32" not-null="false"/>
         </property>
         <property name="custLevel">
-            <column name="cust_level" sql-type="varchar(32)" length="32" not-null="true"/>
+            <column name="cust_level" sql-type="varchar(32)" length="32" not-null="false"/>
         </property>
         <property name="custLinkman">
             <column name="cust_linkman" sql-type="varchar(64)" length="64" not-null="false"/>
@@ -33,7 +33,7 @@
             <column name="cust_phone" sql-type="varchar(64)" length="64" not-null="false"/>
         </property>
         <property name="custMobile">
-            <column name="cust_mobile" sql-type="varchar(16)" length="16" not-null="true"/>
+            <column name="cust_mobile" sql-type="varchar(16)" length="16" not-null="false"/>
         </property>
     </class>
 </hibernate-mapping>

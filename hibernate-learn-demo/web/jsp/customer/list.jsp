@@ -24,7 +24,7 @@
 </HEAD>
 <BODY>
 	<FORM id="customerForm" name="customerForm"
-		action="${pageContext.request.contextPath }/customerServlet?method=list"
+		action="${pageContext.request.contextPath }/customer?method=list"
 		method=post>
 		
 		<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
@@ -81,27 +81,31 @@
 											<TBODY>
 												<TR
 													style="FONT-WEIGHT: bold; FONT-STYLE: normal; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none">
+													<TD>客户编号</TD>
 													<TD>客户名称</TD>
 													<TD>客户级别</TD>
 													<TD>客户来源</TD>
 													<TD>联系人</TD>
 													<TD>电话</TD>
 													<TD>手机</TD>
+													<TD>职业</TD>
 													<TD>操作</TD>
 												</TR>
 												<c:forEach items="${list }" var="customer">
 												<TR
 													style="FONT-WEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: white; TEXT-DECORATION: none">
+													<TD>${customer.custId }</TD>
 													<TD>${customer.custName }</TD>
 													<TD>${customer.custLevel }</TD>
 													<TD>${customer.custSource }</TD>
 													<TD>${customer.custLinkman }</TD>
 													<TD>${customer.custPhone }</TD>
 													<TD>${customer.custMobile }</TD>
+													<TD>${customer.custIndustry }</TD>
 													<TD>
-													<a href="${pageContext.request.contextPath }/customerServlet?method=edit&custId=${customer.custId}">修改</a>
+													<a href="${pageContext.request.contextPath }/customer?method=edit&custId=${customer.custId}">修改</a>
 													&nbsp;&nbsp;
-													<a href="${pageContext.request.contextPath }/customerServlet?method=delete&custId=${customer.custId}">删除</a>
+													<a href="${pageContext.request.contextPath }/customer?method=delete&custId=${customer.custId}">删除</a>
 													</TD>
 												</TR>
 												
@@ -120,7 +124,7 @@
 												,每页显示
 												<select name="pageSize">
 												
-												<option value="15" <c:if test="${pageSize==1 }">selected</c:if>>1</option>
+												<option value="15" <c:if test="${pageSize==15 }">selected</c:if>>15</option>
 												<option value="30" <c:if test="${pageSize==30 }">selected</c:if>>30</option>
 												</select>
 												条

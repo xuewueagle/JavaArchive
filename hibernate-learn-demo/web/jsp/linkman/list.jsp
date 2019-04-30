@@ -24,7 +24,7 @@
 </HEAD>
 <BODY>
 	<FORM id="customerForm" name="customerForm"
-		action="${pageContext.request.contextPath }/linkmanServlet?method=list"
+		action="${pageContext.request.contextPath }/linkMan?method=list"
 		method=post>
 		
 		<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
@@ -96,9 +96,9 @@
 													<TD>${linkman.lkmMobile }</TD>
 													
 													<TD>
-													<a href="${pageContext.request.contextPath }/linkmanServlet?method=edit&lkmId=${linkman.lkmId}">修改</a>
+													<a href="${pageContext.request.contextPath }/linkMan?method=edit&lkmId=${linkman.lkmId}">修改</a>
 													&nbsp;&nbsp;
-													<a href="${pageContext.request.contextPath }/linkmanServlet?method=delete&lkmId=${linkman.lkmId}">删除</a>
+													<a href="${pageContext.request.contextPath }/linkMan?method=delete&lkmId=${linkman.lkmId}">删除</a>
 													</TD>
 												</TR>
 												
@@ -117,7 +117,7 @@
 												,每页显示
 												<select name="pageSize">
 												
-												<option value="1" <c:if test="${pageSize==1 }">selected</c:if>>1</option>
+												<option value="15" <c:if test="${pageSize==15 }">selected</c:if>>15</option>
 												<option value="30" <c:if test="${pageSize==30 }">selected</c:if>>30</option>
 												</select>
 												条

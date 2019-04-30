@@ -13,14 +13,34 @@
         <welcome-file>default.htm</welcome-file>
         <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
+
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>com.eagle.servlet.filter.GenericEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- 客户信息管理 -->
     <servlet>
-        <display-name>SaveCustomer</display-name>
-        <servlet-name>SaveCustomer</servlet-name>
-        <servlet-class>com.eagle.servlet.SaveCustomer</servlet-class>
+        <servlet-name>customerServlet</servlet-name>
+        <servlet-class>com.eagle.servlet.CustomerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>SaveCustomer</servlet-name>
-        <url-pattern>/save</url-pattern>
+        <servlet-name>customerServlet</servlet-name>
+        <url-pattern>/customer</url-pattern>
+    </servlet-mapping>
+
+    <!-- 联系人管理 -->
+    <servlet>
+        <servlet-name>linkManServlet</servlet-name>
+        <servlet-class>com.eagle.servlet.LinkManServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>linkManServlet</servlet-name>
+        <url-pattern>/linkMan</url-pattern>
     </servlet-mapping>
 
 </web-app>

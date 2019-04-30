@@ -14,7 +14,7 @@
 <META content="MSHTML 6.00.2900.3492" name=GENERATOR>
 </HEAD>
 <BODY>
-	<FORM id=form1 name=form1 action="${pageContext.request.contextPath }/save" method="post">
+	<FORM id=form1 name=form1 action="${pageContext.request.contextPath }/customer?method=addSubmit" method="post">
 		
 		<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
 			<TBODY>
@@ -86,6 +86,16 @@
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="custMobile">
 								</td>
+							</TR>
+							<TR>
+
+
+								<td>职业 ：</td>
+								<td>
+									<INPUT class=textbox id=sChannel2
+										   style="WIDTH: 180px" maxLength=50 name="custIndustry">
+								</td>
+
 							</TR>
 							
 							<%--<TR>
