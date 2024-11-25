@@ -1,2 +1,2 @@
-# java_project
-Java项目实战，巩固java技术
+# JavaArchive
+Java代码实践、积累
